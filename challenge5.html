@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Challenge #5</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/challenge5.css">
+</head>
+<script>
+	function imageDisplay(img){
+		var src = img.scr;
+		var bigImage = document.getElementById('display');
+		bigImage.style.backgroundImage = 'url(' + img.src + ')';
+		bigImage.innerText = img.alt;
+	}
+	function imageHidden(){
+		var bigImage = document.getElementById('display');
+		bigImage.style.backgroundImage = 'url(' + img.src + ')';
+		bigImage.innerText = img.alt;
+	}
+</script>
+<body>
+	<main>
+	<h1>JavaScript Challenge #5</h1>
+		<div id = "display">
+			Hover over an image below to display the image and the alt text.
+		</div>
+		<div id ="thumbs">
+		<img class = "thumbnail" 
+			tabindex = "0"  
+			alt = "Styling with a Bandana" 
+			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg"
+			onmouseover="imageDisplay(this)"
+			onmouseout="imageHidden()"
+			onfocus="imageDisplay(this)"
+			onblur="imageHidden()"
+			>
+
+	
+		<img class = "thumbnail"
+			tabindex = "0"  
+			alt = "With My Boy" 
+			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG"
+			onmouseover="imageDisplay(this)"
+			onmouseout="imageHidden()"
+			onfocus="imageDisplay(this)"
+			onblur="imageHidden()"
+			>
+	
+		<img class = "thumbnail" 
+			tabindex = "0"  
+			src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" 
+			alt = "Young Puppy"
+			onmouseover="imageDisplay(this)"
+			onmouseout="imageHidden()"
+			onfocus="imageDisplay(this)"
+			onblur="imageHidden()"
+			>
+		
+		
+		</div>
+
+		<p class="alert">If you are working with the answer code make sure to update the HTML code so that the tab works will all of the images.</p>  <p>Add three of your own images as well, for a total of 6 image.</p>
+	</main>
+</body>
+</html>
+	

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Challenge #3</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/challenge3.css">
+<script>
+  
+  function formComplete(){
+
+  function classComplete(){
+  Freshman = document.getElementById('freshman').checked;
+  Sophmore = document.getElementById('soph').checked;
+  Junior = document.getElementById('jr').checked;
+  Senior = document.getElementById('sr').checked;
+  classOther = document.getElementById('other').checked;
+  if (Freshman || Sophmore || Junior || Senior || classOther == true){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+function dateComplete(){
+  Year2020 = document.getElementById('22').checked;
+  Year2021 = document.getElementById('23').checked;
+  Year2022 = document.getElementById('24').checked;
+  Year2023 = document.getElementById('25').checked;
+  YearOther = document.getElementById('other').checked;
+  if (Year2020 || Year2021 || Year2022 || Year2023 || YearOther == true){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+if (classComplete() && dateComplete() === true){
+  return true;
+}
+else{
+  alert('Please select a class standing & anticipated graduation date.');
+    return false;
+}
+}
+
+</script>
+</head>
+<body>
+  <h1>JavaScript Challenge #3</h1>
+	 <form action="challenge4.html" id ="ch3form" onsubmit="return formComplete()">
+      <fieldset>
+        <legend>Current class standing:</legend>
+        <div>
+          <br> 
+          <label>
+            <input type="radio" name ="standing" value = "1" id="freshman"> Freshman
+          </label><br>
+          <label>
+            <input type="radio" name ="standing" value = "2" id="soph"> Sophomore
+          </label><br>
+          <label>
+            <input type="radio" name ="standing" value = "3" id="jr"> Junior
+          </label><br>
+          <label>
+            <input type="radio" name ="standing" value = "4" id="sr"> Senior
+          </label><br>
+          <label>
+            <input type="radio" name ="standing" value = "5" id="grad"> Graduate
+          </label><br>
+          <label>
+            <input type="radio" name ="standing" value = "6" id="other"> Other
+          </label><br>
+      </div>
+  </fieldset>
+  <fieldset>
+  <legend>Anticipated Graduation Date:</legend>
+        <div>
+          <br> 
+          <label>
+            <input type="radio" name ="gradDate" value = "22" id="22"> 2020
+          </label><br>
+          <label>
+             <input type="radio" name="gradDate" value = "23" id="23"> 2021
+          </label><br>
+          <label>
+             <input type="radio" name ="gradDate" value = "24" id="24"> 2022
+          </label><br>
+          <label>
+            <input type="radio" name ="gradDate" value = "25" id="25"> 2023
+          </label><br>
+          <label>
+             <input type="radio" name ="gradDate" value = "other" id="other"> Other
+          </label><br>
+      </div>
+  </fieldset>
+  <input type="submit" value="Let us know">
+</form>
+<p class = "alert">
+    If you are using the starter code there is an error with the HTML code for the second group of radio buttons. Fix it by updating the HTML.</p>
+   
+</body>
+</html>
