@@ -29,20 +29,7 @@
         </fieldset>
       </form>
   </main>
-  <script>
-    document.getElementById("subscribe").addEventListener("click", emailToggle);
-	  function emailToggle(){
-    var checkToggle = document.getElementById('subscribe').checked;
-    var emailDisplay = document.getElementById('emailDiv');
-    if(checkToggle == true){
-      emailDisplay.style.display = 'block';
-    }
-    else{
-      emailDisplay.style.display = 'none';
-    }
-      document.querySelector('#subscribe').addEventListener('click',emailToggle())
-	}
-    document.querySelector('#subscribe').addEventListener('click',emailToggle())
+  <script src="js/jsChallenges.js">
   </script>
   </body>
 </html>

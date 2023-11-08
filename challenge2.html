@@ -30,21 +30,7 @@
     <p class = "alert">
     If you are using the starter code, there is an accessibility errors on this page.  Fix them!!</p>
     </main>
-    <script>
-      document.getElementById("sameAddress").addEventListener("click", copyAddress);
-      function copyAddress(){
-        var billingAddress = document.getElementById('bill').value;
-        var homeAddress = document.getElementById('home');
-        var copyBilling = document.getElementById('sameAddress').checked;
-        homeAddress.value = billingAddress;
-        if(copyBilling == true){
-          homeAddress.disabled = true;
-        }
-        else {
-          homeAddress.disabled = false;
-          homeAddress.value = "";
-        }
-       }
+    <script src="js/jsChallenges.js">
     </script>
   </head>
   </body>
